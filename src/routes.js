@@ -9,7 +9,7 @@ export default function Router(){
             <Switch>
                 <Route path='/' exact component={Home}/>
                 <Route path='/signup' component={Sign_up}/>
-                <Route path='signin' component={Sign_in}/>
+                <Route path='/signin' component={Sign_in}/>
             </Switch>
         </BrowserRouter>
     )
