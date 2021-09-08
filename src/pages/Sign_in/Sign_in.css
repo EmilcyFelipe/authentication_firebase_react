@@ -53,14 +53,14 @@
     color: #FF0000;
 }
 
-.signUp-form{
+.signIn-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.signUpInput{
+.signInInput{
     border: none;
     outline: none;
     margin-top: 5px;
@@ -70,7 +70,7 @@
     color: rgb(224, 224, 224);
 }
 
-.signUp-button{
+.signIn-button{
     margin-top: 5px;
     border: none;
     background-color: #9999;

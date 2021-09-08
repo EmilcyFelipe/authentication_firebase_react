@@ -38,10 +38,10 @@ const Sign_in = ()=>{
             </div>
             <div className="formWrapper">
             <h2 style={{color:"white"}}>Login Page</h2>
-                <form className="signUp-form"  onSubmit={handleSignIn}>
-                    <input name="email" className="signUpInput" type="email" placeholder="Email"/>
-                    <input name="password" className="signUpInput" type="password" placeholder="Password"/>
-                    <input className="signUp-button" type="submit" />
+                <form className="signIn-form"  onSubmit={handleSignIn}>
+                    <input name="email" className="signInInput" type="email" placeholder="Email"/>
+                    <input name="password" className="signInInput" type="password" placeholder="Password"/>
+                    <input className="signIn-button" type="submit" />
                 </form>
                 {signUpError && <div className="errorSign">{signUpError}</div>}
             </div>
