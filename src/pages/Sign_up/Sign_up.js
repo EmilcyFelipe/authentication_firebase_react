@@ -2,13 +2,14 @@
 import React from 'react'
 import app from '../../Firebase'
 import './Sign_up.css'
-import { Switch, useHistory } from 'react-router';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useHistory } from 'react-router';
+import { getAuth, createUserWithEmailAndPassword,sendEmailVerification} from "firebase/auth";
 
 
 const Sign_up  = ()=>{
     const history = useHistory();
     const[signUpError, setSignUpError] = React.useState(null)
+    const [emailVerification,setEmailVerification] = React.useState(false)
 
     function handleHaveAccount(){
         history.push('/signin')
@@ -20,7 +21,9 @@ const Sign_up  = ()=>{
         const {email,password} = e.target.elements
        try{
            await createUserWithEmailAndPassword(auth,email.value,password.value);
-           history.push('/signin')
+            sendEmailVerification(auth.currentUser).then(()=>{
+                setEmailVerification(true)
+            })
            
        }catch(error){
            if(error.message ==='Firebase: Error (auth/invalid-email).'){
@@ -33,6 +36,7 @@ const Sign_up  = ()=>{
        }
     }
     return(
+        
         <div className="signUpContainer">
             <div className="imgElementUp">
                
@@ -46,8 +50,9 @@ const Sign_up  = ()=>{
                 <form className="signUp-form"  onSubmit={handleSignUp}>
                     <input name="email" className="signUpInput" type="email" placeholder="Email"/>
                     <input name="password" className="signUpInput" type="password" placeholder="Password"/>
-                    <input className="signUp-button" type="submit" />
+                    <input className="signUp-button" type="submit" value="Submit"/>
                 </form>
+                {emailVerification && <div className="emailVerified">Verifique seu email</div>}
                 {signUpError && <div className="errorSign">{signUpError}</div>}
             </div>
         </div>

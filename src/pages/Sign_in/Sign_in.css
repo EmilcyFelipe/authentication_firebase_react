@@ -42,7 +42,7 @@
 .formWrapper{
     width: 50%;
     height: 100%;
-    background: linear-gradient(to right,  rgb(60, 40, 116), rgb(43, 31, 56));
+    background: rgb(20, 20, 20);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,16 +66,14 @@
     margin-top: 5px;
     border-radius: 5px;
     padding: 5px 10px;
-    background-color: rgba(41, 41, 41, 0.521);
-    color: rgb(224, 224, 224);
 }
 
 .signIn-button{
     margin-top: 5px;
     border: none;
     background-color: #9999;
+    color: white;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-
 }

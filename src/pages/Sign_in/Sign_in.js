@@ -18,7 +18,7 @@ const Sign_in = ()=>{
         const {email,password} = e.target.elements
        try{
            await signInWithEmailAndPassword(auth,email.value,password.value);
-           history.push('/home')
+           history.push('/')
        }catch(error){
            if(error.message ==='Firebase: Error (auth/wrong-password).'){
                 setSignUpError('Tente novamente, senha inválida') 
