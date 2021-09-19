@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {getAuth, onAuthStateChanged } from "firebase/auth"
-import app from '../../Firebase'
 import { useHistory } from "react-router";
 
 
