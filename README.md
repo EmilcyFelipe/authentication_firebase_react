@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot](https://github.com/EmilcyFelipe/authentication_firebase_react/blob/master/authentication.png)
 
 ### Links
 
