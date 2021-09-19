@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Authentication](https://authentication-felipe-de-paula.netlify.app/signin)
+- Live Site URL: [Authentication](https://authentication-felipe-de-paula.netlify.app)
 
 ### Built with
 
